@@ -12,8 +12,8 @@ class Layout extends Component{
              <main>
                 {this.props.children}
             </main>
-            <Button btnType="btn" link="#" type="danger" wipe="CONTACT ME">CONTACT ME</Button>
-            <Button btnType="btn" link="#" wipe="SUBMIT">SUBMIT</Button>
+            <Button btnType="btn" link="/login" type="danger" wipe="CONTACT ME">CONTACT ME</Button>
+            <Button btnType="btn" link="/logout" wipe="SUBMIT">SUBMIT</Button>
             </Aux>
            
         )

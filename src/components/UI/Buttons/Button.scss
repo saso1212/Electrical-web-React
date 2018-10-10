@@ -1,4 +1,4 @@
-$duration: .20;
+$duration: .10;
 $easing: ease-in-out;
 
 
@@ -38,7 +38,7 @@ $easing: ease-in-out;
     padding-left: inherit;
     padding-right: inherit;
     left: 100%;
-    text-indent: calc(-100% - 36px);
+   // text-indent: calc(-100% - 36px);
     transition: $duration + s $easing;
   }
   
@@ -57,7 +57,7 @@ $easing: ease-in-out;
 }
 [data-wipe-danger] {  
     display: inline-block;
-    padding: 12px 18px;
+    padding: 10px 12px;
     text-decoration: none;
     position: relative;
     border: 2px solid #ee5555;
@@ -82,7 +82,7 @@ $easing: ease-in-out;
     
     &:before {
       left: 0;
-      text-indent: 18px;
+      text-indent: 12px;
       width: 0;
     }
     
@@ -90,7 +90,7 @@ $easing: ease-in-out;
       padding-left: inherit;
       padding-right: inherit;
       left: 100%;
-      text-indent: calc(-100% - 36px);
+     // text-indent: calc(-100% - 36px);
       transition: $duration + s $easing;
     }
     
