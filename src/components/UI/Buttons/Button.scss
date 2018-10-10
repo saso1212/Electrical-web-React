@@ -55,3 +55,55 @@ $easing: ease-in-out;
     }
   }
 }
+[data-wipe-danger] {  
+    display: inline-block;
+    padding: 12px 18px;
+    text-decoration: none;
+    position: relative;
+    border: 2px solid #ee5555;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #f55c97;
+    overflow: hidden;
+    
+    &:before, &:after {
+      content: attr(data-wipe-danger);
+      padding-top: inherit;
+      padding-bottom: inherit;
+      white-space: nowrap;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+      color: #F1F1F2;
+      background: #f73636;
+    }
+    
+    &:before {
+      left: 0;
+      text-indent: 18px;
+      width: 0;
+    }
+    
+    &:after {
+      padding-left: inherit;
+      padding-right: inherit;
+      left: 100%;
+      text-indent: calc(-100% - 36px);
+      transition: $duration + s $easing;
+    }
+    
+    &:hover {
+      &:before {
+        width: 100%;
+        transition: width $duration + s $easing;
+      }
+      
+      &:after {
+        left: 0;
+        text-indent: 0;
+        transition: 0s $duration + s $easing;
+      }
+    }
+  }
