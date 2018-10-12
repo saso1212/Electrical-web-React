@@ -1,12 +1,14 @@
 import React from 'react';
-import './Button.scss';
-import {Link} from 'react-router-dom';
+import './Button.css';
+
 
 const button=(props)=>{
-    let btn= props.type==="danger" ? <Link to={props.link} className={props.btnType} data-wipe-danger={props.wipe}>{props.children}</Link> : <Link to={props.link} className={props.btnType} data-wipe={props.wipe}>{props.children}</Link>;
-
+    
     return(
-        btn
+        <button
+        disabled={props.disabled}
+        className={["Button",props.btnType].join(" ")}
+        onClick={props.clicked}>{props.children}</button>
        
     )
 }

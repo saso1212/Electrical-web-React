@@ -4,7 +4,7 @@ import './NavigationItem.css';
 
 const navigationItem=(props)=>{
     return(
-        <li className="NavigationItem">
+        <li className={props.navClass}>
             <NavLink 
             to={props.link}
             exact={props.exact}

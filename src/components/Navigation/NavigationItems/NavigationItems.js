@@ -6,10 +6,10 @@ import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
 const navigationItems=()=>{
     return(
         <ul className="NavigationItems">
-            <NavigationItem link="/" exact>HOME</NavigationItem>
-            <NavigationItem link="/abouth" >ABOUTH AS</NavigationItem>
-            <NavigationItem link="/contact" >CONTACT AS</NavigationItem>
-            <NavigationItem link="/login" >LOGIN</NavigationItem>
+            <NavigationItem navClass="NavigationItem" link="/" exact>HOME</NavigationItem>
+            <NavigationItem navClass="NavigationItem" link="/abouth" >ABOUTH AS</NavigationItem>
+            <NavigationItem navClass="NavigationItem" link="/contact" >CONTACT AS</NavigationItem>
+            <NavigationItem navClass="NavigationItem" link="/login" >LOGIN</NavigationItem>
         </ul>
     )
 }      
