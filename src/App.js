@@ -15,14 +15,10 @@ class App extends Component {
       <div>
         <Switch>
        <Layout>
-       <Route path="/login" component={LoginData}/>
+         <Route path="/login" component={LoginData}/>
         <Route path="/" exact component={Carousel} />
        </Layout>
         </Switch>
-     
-       
-      
-        
       </div>
     );
   }
