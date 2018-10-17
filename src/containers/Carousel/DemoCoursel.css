@@ -1,0 +1,12 @@
+.DemoCoursel{
+    width: 100%;
+    height: 400px !important;
+}
+.DemoCoursel .carousel{
+height: 600px;
+}
+
+.DemoCoursel .carousel .slide .legend{
+    top:52%;
+    height: 40px;
+}

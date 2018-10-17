@@ -7,6 +7,9 @@ import Section from '../Section/Section';
 
 
 class Layout extends Component{
+    state={
+        showSection:false
+    }
     render(){
         return(
             <Aux>
@@ -14,7 +17,7 @@ class Layout extends Component{
              <main>
                 {this.props.children}
             </main>
-            <Section/>
+            {this.state.showSection ? <Section/> :null}
             </Aux>
            
         )
