@@ -1,7 +1,10 @@
 import React ,{Component} from 'react';
+import {connect} from 'react-redux';
 import './LoginData.css';
 import Button from '../../components/UI/Buttons/Button';
 import Input from '../../components/UI/Input/Input';
+import * as actionCreators from '../../store/actions/index';
+//import axios from '../../axios-orders';
 
 class LoginData extends Component{
     state={
@@ -25,7 +28,7 @@ class LoginData extends Component{
                 elementType: 'input',
                 elementConfig: {
                     type: 'password',
-                    placeholder: 'Enter Your Password'
+                    placeholder: 'Password lend should be more than 8 caracters'
                 },
                  lable:"Enter your Password",
                 value: '',
@@ -37,9 +40,11 @@ class LoginData extends Component{
                 touched: false
             }
         }
-        ,formIsValid:false
+        ,formIsValid:false,
+        isSignup:true
     }
-
+   
+    
 
     checkValidity(value, rules) {
         let isValid = true;
@@ -85,6 +90,18 @@ class LoginData extends Component{
     }
 
 
+    submitHandler=(event)=>{
+        event.preventDefault();
+     this.props.onAuth(this.state.loginForm.email.value,this.state.loginForm.password.value,this.state.isSignup)
+    }
+
+    onSignupEventHandler=()=>{
+        this.setState(prevState=>{
+            return{isSignup:!prevState.isSignup}
+        })
+    }
+
+
     render(){
         const formElementsArray = [];
         for (let key in this.state.loginForm) {
@@ -95,7 +112,7 @@ class LoginData extends Component{
             console.log(formElementsArray);
         }
         let form = (
-            <form onSubmit={this.orderHandler}>
+            <form onSubmit={this.submitHandler}>
                 {formElementsArray.map(formElement => (
                     <Input 
                         key={formElement.id}
@@ -110,6 +127,7 @@ class LoginData extends Component{
                 ))}
                 <Button btnType="Success" disabled={!this.state.formIsValid}>LOG IN</Button>
             </form>
+            
         );
 
 
@@ -117,9 +135,23 @@ class LoginData extends Component{
             <div className="FormData">
                 <h1>Please LOG IN</h1>
                 {form}
+                <Button btnType="Danger"  clicked={this.onSignupEventHandler}>{!this.state.isSignup ?"SIGN OUT" :"SIGN IN" }</Button>
             </div>
         )
     }
 }
-
-export default LoginData;
+const mapStateToProps = state => {
+    return {
+        
+        loading: state.auth.loading,
+        error: state.auth.error,
+        isAuthenticated: state.auth.token !== null,
+        
+    };
+};
+const mapDispatchToProp= dispatch =>{
+    return{
+        onAuth: (email,password,isSignup)=>dispatch(actionCreators.auth(email,password,isSignup))
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProp)(LoginData);
