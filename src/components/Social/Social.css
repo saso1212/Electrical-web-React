@@ -1,0 +1,7 @@
+.Social{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    z-index: 1000;
+}

@@ -2,8 +2,16 @@ import React ,{Component} from 'react';
 import './Layout.css';
 import Aux from '../../huc/Auxilary';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
-//import Section from '../Section/Section';
+import Section from '../Section/Section';
+import Social from '../../components/Social/Social';
+//import Button from '../../components/UI/Buttons/Button';
 //import LoginData from '../LoginData/LoginData'
+import likedin from '../../assets/images/linkdin.png';
+import twitter from '../../assets/images/twitter.png'
+import youtube from '../../assets/images/youtube.png';
+import facebook from '../../assets/images/facebook.png';
+
+
 
 
 class Layout extends Component{
@@ -14,14 +22,16 @@ class Layout extends Component{
         return(
             <Aux>
                 <Toolbar/>
+                <Social>
+                   <a href="https://www.linkedin.com/m/login/"><img src={likedin} alt="Linkdin" /></a>
+                   <a href="https://www.linkedin.com/m/login/"> <img src={twitter} alt="Twiter"/></a>
+                   <a href="https://www.linkedin.com/m/login/">  <img src={youtube} alt="Youtube"/></a>
+                   <a href="https://www.linkedin.com/m/login/"> <img src={facebook} alt="Facebook"/></a>
+                </Social>
              <main>
                 {this.props.children}
             </main>
-<<<<<<< HEAD
             {this.state.showSection ? <Section/> :null}
-=======
-       
->>>>>>> 315ecfb1e7029890ced00f342025cb7f275a5a9d
             </Aux>
            
         )

@@ -7,7 +7,7 @@ const toolbar=(props)=>{
     return(
     <header className="Toolbar">
          <div>
-           <Logo  height="40px"/>
+           <Logo  height="50px"/>
         </div>
          <nav className="DesktopOnly">
                <NavigationItems />
