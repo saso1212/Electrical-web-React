@@ -1,7 +1,9 @@
+
 .NavigationSection{
-    width: 40%;
-    justify-content: center;
-    height: 100%;
-    display: block;
-    
+    display: flex;
+    width:18% ;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient( #3f87a6, #ebf8e1);
 }

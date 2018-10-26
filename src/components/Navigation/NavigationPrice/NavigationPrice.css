@@ -1,0 +1,8 @@
+.NavigationPrice{
+display: flex;
+height: 50px;
+box-sizing: border-box;
+box-shadow: 3px 3px solid gray;
+margin: 0;
+padding: 0;
+}

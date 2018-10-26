@@ -1,0 +1,26 @@
+.NavigationPriceItem{
+    color:rgb(253, 249, 249);
+    background: linear-gradient(rgb(211, 217, 248),rgb(29, 28, 31));
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border:1px solid black;
+    list-style: none;
+}
+.NavigationPriceItem span{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    
+}
+
+.NavigationPriceItem span:hover,
+.NavigationPriceItem span:active,
+.NavigationPriceItem span.active {
+    color:rgb(252, 246, 246);
+    background: linear-gradient(rgb(29, 28, 31),rgb(211, 217, 248));
+    cursor: pointer;
+}

@@ -9,13 +9,16 @@ import thunk from 'redux-thunk';
 
 import ordersReducer from './store/reducers/orders';
 import authReducer from './store/reducers/auth';
+import decriptionReducer from './store/reducers/descriptions';
 
 import * as serviceWorker from './serviceWorker';
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
      order: ordersReducer,
-     auth: authReducer
+     auth: authReducer,
+     description: decriptionReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(

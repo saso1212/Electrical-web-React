@@ -143,7 +143,7 @@ class LoginData extends Component{
 const mapStateToProps = state => {
     return {
         
-        loading: state.auth.loading,
+        loading: state.auth.isLoading,
         error: state.auth.error,
         isAuthenticated: state.auth.token !== null,
         

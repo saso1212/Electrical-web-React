@@ -20,6 +20,26 @@
     color: rgb(218, 228, 231);
 }
 
+.NavigationItemSection{
+    margin: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+.NavigationItemSection a {
+    color: rgb(49, 9, 61);
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.NavigationItemSection a:hover,
+.NavigationItemSection a:active,
+.NavigationItemSection a.active {
+    color: rgb(218, 228, 231);
+}
 @media (min-width: 500px) {
     .NavigationItem {
         margin: 0;
@@ -43,4 +63,50 @@
         border-bottom: 4px solid #40A4C8;
         color: white;
     }
+    .NavigationItemSection {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+    }
+    
+    .NavigationItemSection a {
+        color: rgb(16, 26, 82);
+        height: 100%;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .NavigationItemSection a:hover,
+    .NavigationItemSection a:active,
+    .NavigationItemSection a.active {
+        background-color: rgb(105, 89, 112);
+        border-bottom: 4px solid #40A4C8;
+        color: white;
+    }
+}
+
+
+.NavigationItemSection {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+}
+
+.NavigationItemSection a {
+    color: rgb(16, 26, 82);
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+}
+
+.NavigationItemSection a:hover,
+.NavigationItemSection a:active,
+.NavigationItemSection a.active {
+    background-color: rgb(105, 89, 112);
+    border-bottom: 4px solid #40A4C8;
+    color: white;
 }

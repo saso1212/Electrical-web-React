@@ -1,1 +1,2 @@
 export {auth} from './auth';
+export {fadeDescriptionLighting,fadeDescriptionInstalation,fadeDescriptionAlarm,fadeDescriptionAutomation,fadeDescriptionEnterteinmant,fadeDescriptionNetworks,fadeDescriptionVideo} from './descriptions';

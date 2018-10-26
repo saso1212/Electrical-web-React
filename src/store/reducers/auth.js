@@ -13,7 +13,8 @@ const reducer=(state=initialState,action)=>{
         case actionTypes.AUTH_START:
         return{
             ...state,
-             error:null,isLoading:true
+             error:null,
+             isLoading:true
         }
         case actionTypes.AUTH_SUCCESS:
             return updateObject(state,{
